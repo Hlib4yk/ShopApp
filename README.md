@@ -36,7 +36,7 @@
 1. Клонувати репозиторій:
 
 ```bash
-git clone https://github.com/your-username/my-shop-app.git
+git clone https://github.com/Hlib4yk/ShopApp.git
 cd my-shop-app
 ```
 

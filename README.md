@@ -1,46 +1,94 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# My Shop App
 
-## Available Scripts
+Тестове завдання: створення веб-додатку для керування списком продуктів на основі **React**, **Redux Toolkit**, **TypeScript** і **JSON Server**.
 
-In the project directory, you can run:
+---
 
-### `npm start`
+## Основні можливості
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- Перегляд списку продуктів
+- Додавання нового продукту через модальне вікно
+- Видалення продукту через підтвердження
+- Сортування продуктів за ім'ям або кількістю
+- Перехід на сторінку деталей продукту
+- Редагування даних продукту через модальне вікно
+- Перегляд списку коментарів до продукту
+- Додавання коментарів
+- Видалення коментарів
+- Обробка помилок (наприклад, якщо продукт не знайдено)
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+---
 
-### `npm test`
+## Технології
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- **React**
+- **Redux Toolkit** для керування станом
+- **TypeScript** для типізації
+- **Axios** для запитів до API
+- **JSON Server** для емуляції бекенду
+- **Nodemon** для автоматичного перезапуску сервера при зміні `db.json`
 
-### `npm run build`
+---
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Як запустити проект
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+1. Клонувати репозиторій:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```bash
+git clone https://github.com/your-username/my-shop-app.git
+cd my-shop-app
+```
 
-### `npm run eject`
+2. Встановити залежності:
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+```bash
+npm install
+```
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+3. Запустити JSON Server (паралельно з клієнтом):
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+```bash
+npm run server
+```
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+4. Запустити фронтенд-додаток:
 
-## Learn More
+```bash
+npm run dev
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+---
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Структура проекту
+
+```
+src/
+ ├── app/                  // Redux store
+ ├── components/           // Загальні компоненти (Modal, тощо)
+ ├── features/products/    // Redux slice + API сервіси
+ ├── pages/                // Сторінки (ProductListPage, ProductDetailPage)
+ ├── types/                // Типи даних (Product, Comment)
+ └── ...
+```
+
+---
+
+## Особливості реалізації
+
+- `id` для продуктів генерується самостійно на фронтенді (`max existing id + 1`).
+- Після додавання нового продукту автоматично фетчиться оновлений список продуктів.
+- Обробляється стан `loading`, `error` при завантаженні деталей продукту та коментарів.
+- Проста і сучасна візуальна стилізація через inline-стилі.
+- Сервер автоматично оновлюється через `nodemon` при зміні `db.json`.
+
+---
+
+## Потенційні поліпшення
+
+- Додавання індикаторів завантаження (спінерів) для UX.
+- Красива обробка помилок через окремі компоненти (наприклад, ErrorPage).
+- Підключення реальної бази даних замість JSON Server.
+- Додавання unit-тестів для Redux і компонентів.
+
+---

@@ -1,0 +1,66 @@
+{
+  "products": [
+    {
+      "id": "6592",
+      "name": "Potato",
+      "count": 122,
+      "size": {
+        "width": 1,
+        "height": 1
+      },
+      "weight": "2",
+      "imageUrl": "https://images.unsplash.com/photo-1518977676601-b53f82aba655?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "comments": []
+    },
+    {
+      "id": "6593",
+      "name": "Asparagus",
+      "count": 1,
+      "size": {
+        "width": 1,
+        "height": 1
+      },
+      "weight": "200 grams",
+      "imageUrl": "https://images.unsplash.com/photo-1595855759920-86582396756a?q=80&w=3024&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "comments": []
+    },
+    {
+      "id": "6595",
+      "name": "Agrus",
+      "count": 4,
+      "size": {
+        "width": 3,
+        "height": 3
+      },
+      "weight": "100 grams",
+      "imageUrl": "https://images.unsplash.com/photo-1676043967557-2b70d9facd71?q=80&w=2268&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "comments": []
+    },
+    {
+      "id": "6596",
+      "name": "Cucumber",
+      "count": 6,
+      "size": {
+        "width": 7,
+        "height": 6
+      },
+      "weight": "200",
+      "imageUrl": "https://plus.unsplash.com/premium_photo-1675237624816-a4755b4649fe?q=80&w=3087&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "comments": []
+    }
+  ],
+  "comments": [
+    {
+      "id": "b6fd",
+      "productId": "6592",
+      "description": "Awesome potato",
+      "date": "26.04.2025, 13:03:37"
+    },
+    {
+      "id": "b929",
+      "productId": "6596",
+      "description": "Cool cucumber",
+      "date": "26.04.2025, 13:27:54"
+    }
+  ]
+}

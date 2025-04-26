@@ -49,13 +49,13 @@ npm install
 3. Запустити JSON Server (паралельно з клієнтом):
 
 ```bash
-npm run server
+nodemon --watch db.json --exec "json-server --watch db.json --port 3001"
 ```
 
 4. Запустити фронтенд-додаток:
 
 ```bash
-npm run dev
+npm start
 ```
 
 ---

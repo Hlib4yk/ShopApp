@@ -24,6 +24,16 @@ const ProductListPage = () => {
   const [selectedProductId, setSelectedProductId] = useState<number | null>(null);
   const [sortType, setSortType] = useState<"name" | "count">("name");
 
+  const inputStyle = {
+    display: "block",
+    marginTop: "6px",
+    width: "100%",
+    padding: "8px",
+    borderRadius: "8px",
+    border: "1px solid #ccc",
+  };
+  
+
   const [formData, setFormData] = useState({
     name: "",
     count: 0,
@@ -215,62 +225,107 @@ const ProductListPage = () => {
 
       {/* Модалка додавання продукту */}
       <Modal isOpen={isAddModalOpen} onClose={() => setIsAddModalOpen(false)}>
-        <h2>Add New Product</h2>
-        <input
-          type="text"
-          name="name"
-          placeholder="Name"
-          value={formData.name}
-          onChange={handleInputChange}
-          style={{ display: "block", marginBottom: "10px", width: "100%", padding: "8px", borderRadius: "8px", border: "1px solid #ccc" }}
-        />
-        <input
-          type="number"
-          name="count"
-          placeholder="Count"
-          value={formData.count}
-          onChange={handleInputChange}
-          style={{ display: "block", marginBottom: "10px", width: "100%", padding: "8px", borderRadius: "8px", border: "1px solid #ccc" }}
-        />
-        <input
-          type="number"
-          name="width"
-          placeholder="Width"
-          value={formData.width}
-          onChange={handleInputChange}
-          style={{ display: "block", marginBottom: "10px", width: "100%", padding: "8px", borderRadius: "8px", border: "1px solid #ccc" }}
-        />
-        <input
-          type="number"
-          name="height"
-          placeholder="Height"
-          value={formData.height}
-          onChange={handleInputChange}
-          style={{ display: "block", marginBottom: "10px", width: "100%", padding: "8px", borderRadius: "8px", border: "1px solid #ccc" }}
-        />
-        <input
-          type="text"
-          name="weight"
-          placeholder="Weight"
-          value={formData.weight}
-          onChange={handleInputChange}
-          style={{ display: "block", marginBottom: "10px", width: "100%", padding: "8px", borderRadius: "8px", border: "1px solid #ccc" }}
-        />
-        <input
-          type="text"
-          name="imageUrl"
-          placeholder="Image URL"
-          value={formData.imageUrl}
-          onChange={handleInputChange}
-          style={{ display: "block", marginBottom: "20px", width: "100%", padding: "8px", borderRadius: "8px", border: "1px solid #ccc" }}
-        />
-        <button onClick={handleSubmit} style={{ padding: "8px 20px", marginRight: "10px" }}>
-          Confirm
-        </button>
-        <button onClick={() => setIsAddModalOpen(false)} style={{ padding: "8px 20px" }}>
-          Cancel
-        </button>
-      </Modal>
+  <h2 style={{ marginBottom: "20px" }}>Add New Product</h2>
+
+  <div style={{ display: "flex", flexDirection: "column", gap: "12px", paddingRight: "12px" }}>
+    <label>
+      Name
+      <input
+        type="text"
+        name="name"
+        value={formData.name}
+        onChange={handleInputChange}
+        style={inputStyle}
+      />
+    </label>
+
+    <label>
+      Count
+      <input
+        type="number"
+        name="count"
+        value={formData.count}
+        onChange={handleInputChange}
+        style={inputStyle}
+      />
+    </label>
+
+    <label>
+      Width
+      <input
+        type="number"
+        name="width"
+        value={formData.width}
+        onChange={handleInputChange}
+        style={inputStyle}
+      />
+    </label>
+
+    <label>
+      Height
+      <input
+        type="number"
+        name="height"
+        value={formData.height}
+        onChange={handleInputChange}
+        style={inputStyle}
+      />
+    </label>
+
+    <label>
+      Weight
+      <input
+        type="text"
+        name="weight"
+        value={formData.weight}
+        onChange={handleInputChange}
+        style={inputStyle}
+      />
+    </label>
+
+    <label>
+      Image URL
+      <input
+        type="text"
+        name="imageUrl"
+        value={formData.imageUrl}
+        onChange={handleInputChange}
+        style={inputStyle}
+      />
+    </label>
+  </div>
+
+  <div style={{ marginTop: "20px", display: "flex", gap: "10px" }}>
+    <button
+      onClick={handleSubmit}
+      style={{
+        backgroundColor: "#2563eb",
+        color: "white",
+        padding: "10px 20px",
+        border: "none",
+        borderRadius: "8px",
+        cursor: "pointer",
+      }}
+    >
+      Confirm
+    </button>
+
+    <button
+      onClick={() => setIsAddModalOpen(false)}
+      style={{
+        backgroundColor: "#e5e7eb",
+        color: "#111827",
+        padding: "10px 20px",
+        border: "1px solid #d1d5db",
+        borderRadius: "8px",
+        cursor: "pointer",
+      }}
+    >
+      Cancel
+    </button>
+  </div>
+</Modal>
+
 
       {/* Модалка підтвердження видалення */}
       <Modal isOpen={isDeleteModalOpen} onClose={() => setIsDeleteModalOpen(false)}>

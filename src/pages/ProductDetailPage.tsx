@@ -22,6 +22,15 @@ const ProductDetailPage = () => {
   const [comments, setComments] = useState<CommentModel[]>([]);
   const [newCommentText, setNewCommentText] = useState("");
   const [isEditModalOpen, setIsEditModalOpen] = useState(false);
+  const inputStyle = {
+    display: "block",
+    marginTop: "6px",
+    width: "100%",
+    padding: "8px",
+    borderRadius: "8px",
+    border: "1px solid #ccc",
+  };
+  
 
   const [formData, setFormData] = useState({
     name: "",
@@ -181,25 +190,107 @@ const ProductDetailPage = () => {
 
         {/* Modal Edit Product */}
         <Modal isOpen={isEditModalOpen} onClose={() => setIsEditModalOpen(false)}>
-          <h2>Edit Product</h2>
-          {["name", "count", "width", "height", "weight", "imageUrl"].map((field) => (
-            <input
-              key={field}
-              type={field === "count" || field === "width" || field === "height" ? "number" : "text"}
-              name={field}
-              placeholder={field.charAt(0).toUpperCase() + field.slice(1)}
-              value={(formData as any)[field]}
-              onChange={handleInputChange}
-              style={{ display: "block", marginBottom: "10px", width: "100%", padding: "8px", borderRadius: "8px", border: "1px solid #ccc" }}
-            />
-          ))}
-          <button onClick={handleUpdate} style={{ marginRight: "10px", padding: "8px 20px" }}>
-            Confirm
-          </button>
-          <button onClick={() => setIsEditModalOpen(false)} style={{ padding: "8px 20px" }}>
-            Cancel
-          </button>
-        </Modal>
+  <h2 style={{ marginBottom: "20px" }}>Edit Product</h2>
+
+  <div style={{ display: "flex", flexDirection: "column", gap: "12px", paddingRight: "12px" }}>
+    <label>
+      Name
+      <input
+        type="text"
+        name="name"
+        value={formData.name}
+        onChange={handleInputChange}
+        style={inputStyle}
+      />
+    </label>
+
+    <label>
+      Count
+      <input
+        type="number"
+        name="count"
+        value={formData.count}
+        onChange={handleInputChange}
+        style={inputStyle}
+      />
+    </label>
+
+    <label>
+      Width
+      <input
+        type="number"
+        name="width"
+        value={formData.width}
+        onChange={handleInputChange}
+        style={inputStyle}
+      />
+    </label>
+
+    <label>
+      Height
+      <input
+        type="number"
+        name="height"
+        value={formData.height}
+        onChange={handleInputChange}
+        style={inputStyle}
+      />
+    </label>
+
+    <label>
+      Weight
+      <input
+        type="text"
+        name="weight"
+        value={formData.weight}
+        onChange={handleInputChange}
+        style={inputStyle}
+      />
+    </label>
+
+    <label>
+      Image URL
+      <input
+        type="text"
+        name="imageUrl"
+        value={formData.imageUrl}
+        onChange={handleInputChange}
+        style={inputStyle}
+      />
+    </label>
+  </div>
+
+  <div style={{ marginTop: "20px", display: "flex", gap: "10px" }}>
+    <button
+      onClick={handleUpdate}
+      style={{
+        backgroundColor: "#2563eb",
+        color: "white",
+        padding: "10px 20px",
+        border: "none",
+        borderRadius: "8px",
+        cursor: "pointer",
+      }}
+    >
+      Confirm
+    </button>
+
+    <button
+      onClick={() => setIsEditModalOpen(false)}
+      style={{
+        backgroundColor: "#e5e7eb",
+        color: "#111827",
+        padding: "10px 20px",
+        border: "1px solid #d1d5db",
+        borderRadius: "8px",
+        cursor: "pointer",
+      }}
+    >
+      Cancel
+    </button>
+  </div>
+</Modal>
+
 
         <hr style={{ margin: "30px 0" }} />
 

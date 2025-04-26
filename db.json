@@ -29,7 +29,7 @@
       "name": "Agrus",
       "count": 4,
       "size": {
-        "width": 3,
+        "width": 5,
         "height": 3
       },
       "weight": "100 grams",
@@ -47,6 +47,30 @@
       "weight": "200",
       "imageUrl": "https://plus.unsplash.com/premium_photo-1675237624816-a4755b4649fe?q=80&w=3087&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       "comments": []
+    },
+    {
+      "id": "6597",
+      "name": "Tomato",
+      "count": 5,
+      "size": {
+        "width": 4,
+        "height": 4
+      },
+      "weight": "200 grams",
+      "imageUrl": "https://images.unsplash.com/photo-1607305387299-a3d9611cd469?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "comments": []
+    },
+    {
+      "id": 6598,
+      "name": "Tomato",
+      "count": 4,
+      "size": {
+        "width": 4,
+        "height": 4
+      },
+      "weight": "200 ",
+      "imageUrl": "https://images.unsplash.com/photo-1607305387299-a3d9611cd469?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "comments": []
     }
   ],
   "comments": [
@@ -61,6 +85,12 @@
       "productId": "6596",
       "description": "Cool cucumber",
       "date": "26.04.2025, 13:27:54"
+    },
+    {
+      "id": "6edf",
+      "productId": "6595",
+      "description": "Good gooseberry",
+      "date": "26.04.2025, 13:40:18"
     }
   ]
 }
